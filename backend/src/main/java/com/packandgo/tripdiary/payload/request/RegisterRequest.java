@@ -1,4 +1,4 @@
-package com.packandgo.tripdiary.payload.request.auth;
+package com.packandgo.tripdiary.payload.request;
 
 import org.springframework.beans.factory.annotation.Required;
 

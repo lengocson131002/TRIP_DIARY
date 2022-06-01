@@ -1,4 +1,4 @@
-package com.packandgo.tripdiary.payload.request.user;
+package com.packandgo.tripdiary.payload.request;
 
 public class ChangePasswordRequest {
 

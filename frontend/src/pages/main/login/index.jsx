@@ -10,46 +10,37 @@ import styles from "./login.module.css";
 import LoginGoogle from "./loginGoogle";
 import "react-notifications/lib/notifications.css";
 import { NotificationContainer } from "react-notifications";
-import validateInput from "../../../components/validateInput/validateInput";
 const clientId =
   "299402568375-ih3in50qahdomql32v7c864vc3c78kh5.apps.googleusercontent.com";
 function Login() {
+  // const errors = useIsLogin();
   const { hidden, handleClick } = useIsHidden();
   const dispatch = useDispatch();
 
   const [user, setUser] = useState({
-    usernameOrEmail: "",
-    password: "",
+    taiKhoan: "",
+    matKhau: "",
   });
-  const [error, setError] = useState({
-    usernameOrEmail: "",
-    password: "",
-  });
-
   const handleChange = (event) => {
     const { value, name } = event.target;
     setUser({
       ...user,
       [name]: value,
     });
-    validateInput(event, user, error, setError);
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(postLogin(user.usernameOrEmail, user.password));
+    dispatch(postLogin(user.taiKhoan, user.matKhau));
   };
-  // useEffect(() => {
-  //   function start() {
-  //     gapi.load("client.auth2", () => {
-  //       gapi.client.init({
-  //         clientId: clientId,
-  //         scope: "",
-  //       });
-  //     });
-  //   }
-  //   start();
-  // });
-
+  useEffect(() => {
+    function start() {
+      gapi.client.init({
+        clientId: clientId,
+        scope: "",
+      });
+      gapi.load("client.auth2", start);
+    }
+  });
   return (
     <div>
       <div>
@@ -91,7 +82,7 @@ function Login() {
                   />
                 </div>
                 <div>
-                  <span>With Facebook (update soon)</span>
+                  <span>With Facebook</span>
                 </div>
               </Link>
               <LoginGoogle />
@@ -136,28 +127,21 @@ function Login() {
                   <div className={styles.inputEmail}>
                     <input
                       type="text"
-                      name="usernameOrEmail"
-                      placeholder="Fill your email Or UserName address"
+                      id="taiKhoan"
+                      name="taiKhoan"
+                      placeholder="Fill your email address"
                       onChange={handleChange}
                     />
-                    {error.usernameOrEmail && (
-                      <span style={{ color: "#e64646" }}>
-                        {error.usernameOrEmail}
-                      </span>
-                    )}
                   </div>
                 </div>
                 <div className={styles.input}>
                   <div className={styles.inputEmail}>
                     <input
                       type="password"
-                      name="password"
+                      name="matKhau"
                       placeholder="Password"
                       onChange={handleChange}
                     />
-                    {error.password && (
-                      <span style={{ color: "#e64646" }}>{error.password}</span>
-                    )}
                   </div>
                 </div>
                 <button>

@@ -29,7 +29,7 @@ export const postLogin = (usernameOrEmail, password) => {
       .catch((err) => {
         dispatch(stopLoading());
         dispatch(postLoginFailed(err));
-        console.log(err.response.data);
+        console.log(err.response.data.message);
         NotificationManager.error(err.response.data.message);
       });
   };
@@ -48,7 +48,7 @@ const postLoginFailed = (err) => {
     payload: err,
   };
 };
-export const postRegistration = (values, goBack) => {
+export const postRegistration = (values, history) => {
   return (dispatch) => {
     dispatch(startLoading());
     axios({
@@ -66,8 +66,7 @@ export const postRegistration = (values, goBack) => {
       .then((res) => {
         dispatch(stopLoading());
         dispatch(postRegistrationSuccess(res.data));
-        goBack.push("/login");
-        NotificationManager.success(res.data.message);
+        history.goBack();
       })
       .catch((err) => {
         dispatch(stopLoading());

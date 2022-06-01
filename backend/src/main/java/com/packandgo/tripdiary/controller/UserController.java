@@ -1,13 +1,9 @@
 package com.packandgo.tripdiary.controller;
 
 import com.packandgo.tripdiary.model.User;
-
 import com.packandgo.tripdiary.model.UserInfo;
-
+import com.packandgo.tripdiary.payload.request.ChangePasswordRequest;
 import com.packandgo.tripdiary.payload.request.InfoUpdateRequest;
-
-import com.packandgo.tripdiary.payload.request.user.ChangePasswordRequest;
-
 import com.packandgo.tripdiary.payload.response.MessageResponse;
 import com.packandgo.tripdiary.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

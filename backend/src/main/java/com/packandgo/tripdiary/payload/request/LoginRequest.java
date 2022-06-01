@@ -1,4 +1,4 @@
-package com.packandgo.tripdiary.payload.request.auth;
+package com.packandgo.tripdiary.payload.request;
 
 public class LoginRequest {
     private String usernameOrEmail;

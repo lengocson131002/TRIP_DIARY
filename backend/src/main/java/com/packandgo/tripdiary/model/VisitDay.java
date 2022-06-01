@@ -12,31 +12,36 @@ public class VisitDay {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
-    @Column(name = "day_number")
+    @Column(name = "dayNumber")
     private int dayNumber;
     @Column(name = "description")
     private String description;
 
     @ManyToOne
-    @JoinColumn(name = "trip_id", nullable = false)
+    @JoinColumn(name="trip_id", nullable=false)
     private Trip trip;
 
-    @OneToMany(mappedBy = "visitDay",
-            fetch = FetchType.LAZY,
-            cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "visitday_image",
+            joinColumns = @JoinColumn(name = "visitday_id"),
+            inverseJoinColumns = @JoinColumn(name = "image_id")
+    )
+    private List<Image> images = new ArrayList<>();
+
+    @OneToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "visitday_destination",
+            joinColumns = @JoinColumn(name = "visitday_id"),
+            inverseJoinColumns = @JoinColumn(name = "destination_id")
+    )
     private List<Destination> destinations = new ArrayList<>();
 
     public VisitDay() {
     }
-
-    public VisitDay(int dayNumber, String description) {
+    public VisitDay( int dayNumber, String description) {
         this.dayNumber = dayNumber;
         this.description = description;
-    }
-
-    public void addDestination(Destination destination) {
-        this.destinations.add(destination);
-        destination.setVisitDay(this);
     }
 
     public Long getId() {
@@ -71,6 +76,14 @@ public class VisitDay {
         this.trip = trip;
     }
 
+    public List<Image> getImages() {
+        return images;
+    }
+
+    public void setImages(List<Image> images) {
+        this.images = images;
+    }
+
     public List<Destination> getDestinations() {
         return destinations;
     }
@@ -78,7 +91,5 @@ public class VisitDay {
     public void setDestinations(List<Destination> destinations) {
         this.destinations = destinations;
     }
-
-
 
 }

@@ -1,7 +1,5 @@
 package com.packandgo.tripdiary.model;
 
-import org.hibernate.annotations.Cascade;
-
 import javax.persistence.*;
 
 @Entity
@@ -12,10 +10,6 @@ public class Image {
     private Long id;
     private String url;
     private String description;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "destination_id", referencedColumnName = "id", nullable = false)
-    private Destination destination;
 
 
     public Image(){};
@@ -47,13 +41,5 @@ public class Image {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public Destination getDestination() {
-        return destination;
-    }
-
-    public void setDestination(Destination destination) {
-        this.destination = destination;
     }
 }
