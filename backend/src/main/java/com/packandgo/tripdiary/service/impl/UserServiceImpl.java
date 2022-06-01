@@ -1,5 +1,6 @@
 package com.packandgo.tripdiary.service.impl;
 
+import com.packandgo.tripdiary.enums.Gender;
 import com.packandgo.tripdiary.enums.UserStatus;
 import com.packandgo.tripdiary.model.PasswordResetToken;
 import com.packandgo.tripdiary.model.User;
@@ -106,6 +107,13 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional
+    public UserInfo findUserInfoByUsername(String username){
+        return userRepository.findInfoByUsername(username)
+                .orElseThrow(() -> new UsernameNotFoundException("User not found"));
+    }
+
+    @Override
+    @Transactional
     public void changePassword(User user, String newPassword) {
         user.setPassword(passwordEncoder.encode(newPassword));
         userRepository.save(user);
@@ -143,4 +151,19 @@ public class UserServiceImpl implements UserService {
         userInfoRepository.save(info);
     }
 
+    @Override
+    @Transactional
+    public void updateUserInfo(UserInfo userInfo,String firstName, String lastName, String phoneNumber, String city, String country, Gender gender, Date dateOfBirth, String aboutMe) {
+        userInfo.setFirstName(firstName);
+        userInfo.setLastName(lastName);
+        userInfo.setPhoneNumber(phoneNumber);
+        userInfo.setCity(city);
+        userInfo.setCountry(country);
+        userInfo.setGender(gender);
+        userInfo.setDateOfBirth(dateOfBirth);
+        userInfo.setAboutMe(aboutMe);
+    }
+
+
 }
+

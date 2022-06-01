@@ -1,7 +1,10 @@
 package com.packandgo.tripdiary.service;
 
+import com.packandgo.tripdiary.enums.Gender;
 import com.packandgo.tripdiary.model.User;
 import com.packandgo.tripdiary.model.UserInfo;
+
+import java.util.Date;
 
 public interface UserService {
     public User findUserByEmail(String email);
@@ -9,6 +12,8 @@ public interface UserService {
     public User findUserByUsername(String username);
 
     public User findUserByUsernameOrEmail(String usernameOrEmail);
+
+    public UserInfo findUserInfoByUsername(String username);
 
     public boolean existsByUsername(String username);
 
@@ -25,4 +30,6 @@ public interface UserService {
     public void removeUser(String username);
 
     public void saveUserInfo(UserInfo info);
+
+    public void updateUserInfo(UserInfo userInfo, String firstName, String lastName, String phoneNumber, String city, String country, Gender gender, Date dateOfBirth, String aboutMe);
 }

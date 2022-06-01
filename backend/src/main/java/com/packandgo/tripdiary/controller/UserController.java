@@ -1,7 +1,9 @@
 package com.packandgo.tripdiary.controller;
 
 import com.packandgo.tripdiary.model.User;
+import com.packandgo.tripdiary.model.UserInfo;
 import com.packandgo.tripdiary.payload.request.ChangePasswordRequest;
+import com.packandgo.tripdiary.payload.request.InfoUpdateRequest;
 import com.packandgo.tripdiary.payload.response.MessageResponse;
 import com.packandgo.tripdiary.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,11 +39,25 @@ public class UserController {
 
         User user = userService.findUserByUsername(userDetails.getUsername());
 
+
         if (!passwordEncoder.matches(newPasswordRequest.getCurrentPassword(), user.getPassword())) {
             throw new IllegalArgumentException("Current password is not correct");
         }
 
         userService.changePassword(user, newPasswordRequest.getNewPassword());
         return ResponseEntity.ok(new MessageResponse("Change password successfully"));
+    }
+    @PostMapping("/info-update")
+    public ResponseEntity<?> updateInfo(@RequestBody InfoUpdateRequest updateRequest) {
+        UserDetails userDetails = (UserDetails) SecurityContextHolder
+                .getContext()
+                .getAuthentication()
+                .getPrincipal();
+
+        UserInfo userInfo = userService.findUserInfoByUsername(userDetails.getUsername());
+
+        userService.updateUserInfo(userInfo, updateRequest.getFirstName(), updateRequest.getLastName(), updateRequest.getPhoneNumber(), updateRequest.getCity(),updateRequest.getCountry(), updateRequest.getGender(), updateRequest.getDateOfBirth(), updateRequest.getAboutMe());
+
+        return ResponseEntity.ok(new MessageResponse("Update successfully"));
     }
 }

@@ -1,6 +1,7 @@
 package com.packandgo.tripdiary.repository;
 
 import com.packandgo.tripdiary.model.User;
+import com.packandgo.tripdiary.model.UserInfo;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -12,6 +13,7 @@ import java.util.Optional;
 public interface UserRepository extends JpaRepository<User, Long> {
     Optional<User> findByEmail(String email);
     Optional<User> findByUsername(String username);
+
     Optional<User> findByUsernameOrEmail(String username, String email);
     Boolean existsByUsernameOrEmail(String username, String email);
     Boolean existsByUsername(String username);
@@ -23,4 +25,6 @@ public interface UserRepository extends JpaRepository<User, Long> {
     @Modifying
     @Query("DELETE FROM User u where u.username = ?1")
     public void removeUserByUsername(String username);
+
+    Optional<UserInfo> findInfoByUsername(String username);
 }
