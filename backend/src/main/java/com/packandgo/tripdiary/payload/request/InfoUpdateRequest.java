@@ -8,7 +8,7 @@ import java.util.Date;
 public class InfoUpdateRequest {
     private String firstName;
     private String lastName;
-    private String email;
+//    private String email;
     private String phoneNumber;
     private String city;
     private String country;
@@ -16,7 +16,7 @@ public class InfoUpdateRequest {
     private Date   dateOfBirth;
     private String aboutMe;
 
-    public InfoUpdateRequest(String firstName, String lastName, String email, String phoneNumber, String city, String country, Gender gender, Date dateOfBirth, String aboutMe) {
+    public InfoUpdateRequest(String firstName, String lastName, String phoneNumber, String city, String country, Gender gender, Date dateOfBirth, String aboutMe) {
         this.firstName = firstName;
         this.lastName = lastName;
 //        this.email = email;

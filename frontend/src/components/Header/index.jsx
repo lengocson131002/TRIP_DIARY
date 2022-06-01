@@ -3,6 +3,7 @@ import { useIsLogin } from "../../hooks/useIsLogin";
 import FormLogout from "./formLogout";
 import styles from "./header.module.css";
 import { Link } from "react-router-dom";
+import logoHeader from "../../assets/images/logos/logo-black-3.png";
 export default function Header() {
   const { user } = useIsLogin();
   const { hidden, handleClick } = useIsHidden();
@@ -12,7 +13,7 @@ export default function Header() {
         <div className={styles.headerLogo}>
           <div>
             <Link to="/">
-              <img alt="Worldee logo" src="images/3bl.png" />
+              <img alt="Worldee logo" src="images/logo/logo-black-3.png" />
             </Link>
           </div>
         </div>
@@ -36,7 +37,7 @@ export default function Header() {
             </div>
           </div>
           <div className={styles.grow} />
-          <a href="/explore/feed">
+          <Link to="/">
             <div className={styles.menuIcon}>
               <img
                 src="fonts/src_app_components_components_svgIcon_icons_commonsprite-afce76.svg#earth_fullY-usage"
@@ -46,7 +47,7 @@ export default function Header() {
             <span>
               <span>Home</span>
             </span>
-          </a>
+          </Link>
           <div className={styles.menuButton} aria-describedby="popup-2">
             <button>
               <div className={styles.menuIcon}>
