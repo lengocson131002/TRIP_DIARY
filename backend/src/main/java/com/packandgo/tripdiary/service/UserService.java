@@ -13,7 +13,7 @@ public interface UserService {
 
     public User findUserByUsernameOrEmail(String usernameOrEmail);
 
-    public UserInfo findUserInfoByUsername(String username);
+    public UserInfo findUserInfoByUserId(Long id);
 
     public boolean existsByUsername(String username);
 

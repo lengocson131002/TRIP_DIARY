@@ -107,8 +107,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional
-    public UserInfo findUserInfoByUsername(String username){
-        return userRepository.findInfoByUsername(username)
+    public UserInfo findUserInfoByUserId(Long id){
+        return userInfoRepository.findInfoByUserId(id)
                 .orElseThrow(() -> new UsernameNotFoundException("User not found"));
     }
 

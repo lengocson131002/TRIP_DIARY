@@ -54,7 +54,9 @@ public class UserController {
                 .getAuthentication()
                 .getPrincipal();
 
-        UserInfo userInfo = userService.findUserInfoByUsername(userDetails.getUsername());
+        User user = userService.findUserByUsername(userDetails.getUsername());
+
+        UserInfo userInfo = userService.findUserInfoByUserId(user.getId());
 
         userService.updateUserInfo(userInfo, updateRequest.getFirstName(), updateRequest.getLastName(), updateRequest.getPhoneNumber(), updateRequest.getCity(),updateRequest.getCountry(), updateRequest.getGender(), updateRequest.getDateOfBirth(), updateRequest.getAboutMe());
 

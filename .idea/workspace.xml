@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7c4a44b4-7d84-42df-a177-33c244690b66" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/controller/TripController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/payload/request/trip/TripRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/repository/TripRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/service/TripService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/service/impl/TripServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/images/logo/logo-black-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/validateInput/validateInput.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/main/settingProfile/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/main/settingProfile/settingProfile.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/model/Destination.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/model/Destination.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/model/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/model/Image.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/model/Trip.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/model/Trip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/model/VisitDay.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/model/VisitDay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/payload/request/ChangePasswordRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/payload/request/user/ChangePasswordRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/payload/request/InfoUpdateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/payload/request/InfoUpdateRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/payload/request/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/payload/request/auth/LoginRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/payload/request/NewPasswordRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/payload/request/auth/NewPasswordRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/payload/request/PasswordResetRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/payload/request/auth/PasswordResetRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/payload/request/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/payload/request/auth/RegisterRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/repository/UserInfoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/repository/UserInfoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/service/PasswordResetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/service/PasswordResetService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/packandgo/tripdiary/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header/formLogout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header/formLogout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header/header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header/header.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Header/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Header/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/landing/Popular/TripItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/landing/Popular/TripItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/landing/Popular/TripItem.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/landing/Popular/TripItem.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/profile/Header/header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/profile/Header/header.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/profile/Header/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/profile/Header/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/configs/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/configs/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/landing/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/landing/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/main/forgotPassword/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/main/forgotPassword/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/main/login/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/main/login/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/main/login/loginGoogle.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/main/login/loginGoogle.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/main/register/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/main/register/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store/actions/user.action.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/actions/user.action.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store/constants/user.const.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/constants/user.const.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store/reducers/user.reducer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/reducers/user.reducer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/templates/main/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/templates/main/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="29ynDGDZAe2rlYQuCL0xVaBsXso" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/trip-diary/TRIP_DIARY"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="backend" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.packandgo.tripdiary.BackendApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7c4a44b4-7d84-42df-a177-33c244690b66" name="Changes" comment="" />
+      <created>1654094071522</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1654094071522</updated>
+      <workItem from="1654094072870" duration="79000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

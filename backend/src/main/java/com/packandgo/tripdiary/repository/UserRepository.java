@@ -26,5 +26,5 @@ public interface UserRepository extends JpaRepository<User, Long> {
     @Query("DELETE FROM User u where u.username = ?1")
     public void removeUserByUsername(String username);
 
-    Optional<UserInfo> findInfoByUsername(String username);
+
 }
