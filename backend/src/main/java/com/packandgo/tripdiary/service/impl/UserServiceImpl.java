@@ -151,18 +151,6 @@ public class UserServiceImpl implements UserService {
         userInfoRepository.save(info);
     }
 
-    @Override
-    @Transactional
-    public void updateUserInfo(UserInfo userInfo,String firstName, String lastName, String phoneNumber, String city, String country, Gender gender, Date dateOfBirth, String aboutMe) {
-        userInfo.setFirstName(firstName);
-        userInfo.setLastName(lastName);
-        userInfo.setPhoneNumber(phoneNumber);
-        userInfo.setCity(city);
-        userInfo.setCountry(country);
-        userInfo.setGender(gender);
-        userInfo.setDateOfBirth(dateOfBirth);
-        userInfo.setAboutMe(aboutMe);
-    }
 
 
 }

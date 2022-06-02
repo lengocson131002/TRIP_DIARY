@@ -31,5 +31,4 @@ public interface UserService {
 
     public void saveUserInfo(UserInfo info);
 
-    public void updateUserInfo(UserInfo userInfo, String firstName, String lastName, String phoneNumber, String city, String country, Gender gender, Date dateOfBirth, String aboutMe);
 }

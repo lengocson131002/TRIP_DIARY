@@ -47,19 +47,5 @@ public class UserController {
         userService.changePassword(user, newPasswordRequest.getNewPassword());
         return ResponseEntity.ok(new MessageResponse("Change password successfully"));
     }
-    @PostMapping("/info-update")
-    public ResponseEntity<?> updateInfo(@RequestBody InfoUpdateRequest updateRequest) {
-        UserDetails userDetails = (UserDetails) SecurityContextHolder
-                .getContext()
-                .getAuthentication()
-                .getPrincipal();
-
-        User user = userService.findUserByUsername(userDetails.getUsername());
-
-        UserInfo userInfo = userService.findUserInfoByUserId(user.getId());
-
-        userService.updateUserInfo(userInfo, updateRequest.getFirstName(), updateRequest.getLastName(), updateRequest.getPhoneNumber(), updateRequest.getCity(),updateRequest.getCountry(), updateRequest.getGender(), updateRequest.getDateOfBirth(), updateRequest.getAboutMe());
-
-        return ResponseEntity.ok(new MessageResponse("Update successfully"));
-    }
+    
 }
