@@ -103,7 +103,7 @@ export const putDeleteTrip = (id, userList, setUserList) => {
     })
       .then((res) => {
         setUserList(userList.filter((elm) => elm.id !== id));
-        const message = `trip ${res.data.id} has been Delete`;
+        const message = "this trip has been deleted successfully";
         NotificationManager.success(message);
       })
       .catch((err) => {

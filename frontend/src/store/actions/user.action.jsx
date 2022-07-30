@@ -27,7 +27,7 @@ import { startLoading, stopLoading } from "../actions/common.action";
 
 const API_URL = process.env.REACT_APP_API_URL;
 const userLogin = localStorage.getItem("userLogin");
-const token = userLogin ? JSON.parse(userLogin).token : "";
+// const token = userLogin ? JSON.parse(userLogin).token : "";
 
 export const postLogin = (usernameOrEmail, password) => {
   return (dispatch) => {
@@ -243,6 +243,7 @@ const getListUserFailed = (err) => {
   };
 };
 export const getListImagesByTrip = (id, setListImages, setLoading) => {
+  const token = userLogin ? JSON.parse(userLogin).token : "";
   return (dispatch) => {
     setLoading(true);
     axios({
@@ -463,7 +464,6 @@ export const updateInfo = (
   dateOfBirth,
   values
 ) => {
-  console.log("🚀 ~ ", gender);
   const userLogin = localStorage.getItem("userLogin");
   const token = userLogin ? JSON.parse(userLogin).token : "";
 
@@ -502,6 +502,7 @@ export const updateInfo = (
   };
 };
 export const getAccountInfo = () => {
+  const token = userLogin ? JSON.parse(userLogin).token : "";
   return (dispatch) => {
     dispatch(startLoading());
     axios({

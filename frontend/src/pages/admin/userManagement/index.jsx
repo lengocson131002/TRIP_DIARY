@@ -18,7 +18,7 @@ import TableAdmin from "./table";
 function UserManagement() {
   const dispatch = useDispatch();
   const [totalPages, setTotalPages] = useState(0);
-  const [page, setPage] = useState(0);
+  const [page, setPage] = useState(1);
   const [userList, setUserList] = useState(null);
   const [loadingInfo, setLoadingInfo] = useState(false);
   const [text, setText] = useState("");
@@ -47,17 +47,31 @@ function UserManagement() {
   }, [handleGrant, page]);
   useEffect(() => {
     const fetchData = async () => {
-      setPage(0);
-      axios({
-        method: "GET",
-        url: `${process.env.REACT_APP_API_URL}/api/search?text=${text.trim()}`,
-      })
-        .then((res) => {
-          setUserList(res.data.users);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
+      text.trim()
+        ? axios({
+            method: "GET",
+            url: `${
+              process.env.REACT_APP_API_URL
+            }/api/search?text=${text.trim()}`,
+          })
+            .then((res) => {
+              setUserList(res.data.users);
+            })
+            .catch((err) => {
+              console.log(err);
+            })
+        : axios({
+            method: "GET",
+            url: `${process.env.REACT_APP_API_URL}/api/users/trips?page=1&size=8`,
+          })
+            .then((res) => {
+              setUserList(res.data.data);
+              setTotalPages(res.data.total);
+              setLoadingInfo(false);
+            })
+            .catch((err) => {
+              console.error(err);
+            });
     };
     fetchData();
   }, [text]);

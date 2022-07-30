@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import classNames from "classnames";
 import { IoArrowBack } from "react-icons/io5";
-import { MdAdminPanelSettings } from "react-icons/md";
+// import { MdAdminPanelSettings } from "react-icons/md";
 import { useIsHidden } from "../../../hooks/useIsHidden";
 import { postLogin } from "./../../../store/actions/user.action";
 import styles from "./login.module.css";
@@ -70,7 +70,7 @@ function Login() {
                 </div>
               </Link>
               <LoginGoogle />
-              <button
+              {/* <button
                 style={{
                   background: "#222",
                   marginBottom: "16px",
@@ -84,7 +84,7 @@ function Login() {
                 <div>
                   <span>With Admin</span>
                 </div>
-              </button>
+              </button> */}
               <button
                 style={{
                   background: "linear-gradient(114deg,#00e1d6,#66ede7)",
