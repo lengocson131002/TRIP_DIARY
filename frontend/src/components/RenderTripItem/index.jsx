@@ -43,7 +43,7 @@ export default function RenderTripItem() {
           style={{
             display: "grid",
             gap: "24px",
-            gridTemplateColumns: "repeat(3, 1fr)",
+            gridTemplateColumns: "repeat(auto-fit,minmax(400px,1fr))",
             margin: "16px 0",
           }}
         >

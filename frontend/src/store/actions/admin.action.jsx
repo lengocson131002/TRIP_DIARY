@@ -1,10 +1,9 @@
 import axios from "axios";
 import { NotificationManager } from "react-notifications";
 const API_URL = process.env.REACT_APP_API_URL;
-const userLogin = localStorage.getItem("userLogin");
-// const token = userLogin ? JSON.parse(userLogin).token : "";
 
 export const putGrant = (username, setHandleGrant) => {
+  const userLogin = localStorage.getItem("userLogin");
   const token = userLogin ? JSON.parse(userLogin).token : "";
   return () => {
     axios({
@@ -26,6 +25,7 @@ export const putGrant = (username, setHandleGrant) => {
   };
 };
 export const putRevoke = (username, setHandleGrant) => {
+  const userLogin = localStorage.getItem("userLogin");
   const token = userLogin ? JSON.parse(userLogin).token : "";
   return () => {
     axios({
@@ -47,6 +47,7 @@ export const putRevoke = (username, setHandleGrant) => {
   };
 };
 export const putBlock = (username, setHandleGrant) => {
+  const userLogin = localStorage.getItem("userLogin");
   const token = userLogin ? JSON.parse(userLogin).token : "";
   return () => {
     axios({
@@ -69,6 +70,7 @@ export const putBlock = (username, setHandleGrant) => {
   };
 };
 export const putUnBlock = (username, setHandleGrant) => {
+  const userLogin = localStorage.getItem("userLogin");
   const token = userLogin ? JSON.parse(userLogin).token : "";
   return () => {
     axios({
@@ -91,6 +93,7 @@ export const putUnBlock = (username, setHandleGrant) => {
   };
 };
 export const putDeleteTrip = (id, userList, setUserList) => {
+  const userLogin = localStorage.getItem("userLogin");
   const token = userLogin ? JSON.parse(userLogin).token : "";
   return () => {
     axios({

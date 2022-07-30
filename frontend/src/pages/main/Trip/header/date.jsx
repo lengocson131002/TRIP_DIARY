@@ -1,5 +1,5 @@
 import moment from "moment";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 import { useDispatch } from "react-redux";
@@ -42,19 +42,28 @@ export default function Date() {
     setIsSingleTrip((prev) => !prev);
   };
 
-  const handleDateChange = useCallback(
-    (dates) => {
-      dispatch({
-        type: SET_DATE,
-        payload: {
-          beginDate: dates.startDate,
-          endDate: !isSingleTrip ? dates.endDate : null,
-        },
-      });
-    },
-    // eslint-disable-next-line
-    []
-  );
+  // const handleDateChange = useCallback(
+  //   (dates) => {
+  //     dispatch({
+  //       type: SET_DATE,
+  //       payload: {
+  //         beginDate: dates.startDate,
+  //         endDate: !isSingleTrip ? dates.endDate : null,
+  //       },
+  //     });
+  //   },
+  //   // eslint-disable-next-line
+  //   []
+  // );
+  const handleDateChange = (dates) => {
+    dispatch({
+      type: SET_DATE,
+      payload: {
+        beginDate: dates.startDate,
+        endDate: !isSingleTrip ? dates.endDate : null,
+      },
+    });
+  };
 
   return (
     <div className={styles.tripDate}>

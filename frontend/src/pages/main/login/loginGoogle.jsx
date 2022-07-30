@@ -5,6 +5,7 @@ import styles from "./login.module.css";
 import { useDispatch } from "react-redux";
 import { postLoginSuccess } from "../../../store/actions/user.action";
 import { gapi } from "gapi-script";
+import { NotificationManager } from "react-notifications";
 
 const clientId =
   "874015971178-0461l5tlksvspu487u08779128bn5rn7.apps.googleusercontent.com";
@@ -27,18 +28,19 @@ export default function LoginGoogle() {
     },
   };
   const onSuccess = async (res) => {
-    console.log(res);
-    let jwtToken = await axios.post(
-      `${process.env.REACT_APP_API_URL}/oauth2/jwt/google`,
-      JSON.stringify(res),
-      config
-    );
-    console.log(res);
-    if (jwtToken.status === 200) {
-      localStorage.setItem("userLogin", JSON.stringify(jwtToken.data));
+    try {
+      let jwtToken = await axios.post(
+        `${process.env.REACT_APP_API_URL}/oauth2/jwt/google`,
+        JSON.stringify(res),
+        config
+      );
+      if (jwtToken.status === 200) {
+        localStorage.setItem("userLogin", JSON.stringify(jwtToken.data));
+      }
+      dispatch(postLoginSuccess(jwtToken.data));
+    } catch (err) {
+      NotificationManager.error("Account has been blocked!!!");
     }
-    console.log("OK");
-    dispatch(postLoginSuccess(jwtToken.data));
   };
   const onFailure = (res) => {
     console.log("onFailure", res);

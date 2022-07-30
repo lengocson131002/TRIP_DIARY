@@ -83,7 +83,7 @@ const GrantUserModal = ({ id, role, setHandleGrant }) => {
     <div>
       {role === 2 ? (
         <>
-          <Message>Are you sure to grant this user?</Message>
+          <Message>Are you sure to revoke this user?</Message>
           <ModalFooter>
             <ConfirmButton onClick={onRevokeUser} disabled={isLoading}>
               {isLoading ? "Deleting..." : "Submit"}
