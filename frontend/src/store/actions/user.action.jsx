@@ -26,7 +26,7 @@ import {
 import { startLoading, stopLoading } from "../actions/common.action";
 
 const API_URL = process.env.REACT_APP_API_URL;
-const userLogin = localStorage.getItem("userLogin");
+// const userLogin = localStorage.getItem("userLogin");
 // const token = userLogin ? JSON.parse(userLogin).token : "";
 
 export const postLogin = (usernameOrEmail, password) => {
@@ -243,6 +243,7 @@ const getListUserFailed = (err) => {
   };
 };
 export const getListImagesByTrip = (id, setListImages, setLoading) => {
+  const userLogin = localStorage.getItem("userLogin");
   const token = userLogin ? JSON.parse(userLogin).token : "";
   return (dispatch) => {
     setLoading(true);
@@ -272,6 +273,7 @@ export const getListTripByAdmin = (
   setTotalPages,
   setLoading
 ) => {
+  const userLogin = localStorage.getItem("userLogin");
   const token = userLogin ? JSON.parse(userLogin).token : "";
   return (dispatch) => {
     dispatch(startLoading());
@@ -502,6 +504,7 @@ export const updateInfo = (
   };
 };
 export const getAccountInfo = () => {
+  const userLogin = localStorage.getItem("userLogin");
   const token = userLogin ? JSON.parse(userLogin).token : "";
   return (dispatch) => {
     dispatch(startLoading());

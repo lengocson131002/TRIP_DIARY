@@ -13,7 +13,7 @@ function ImagesForTrip({ hidden, setHidden, trip }) {
     // eslint-disable-next-line
   }, [trip]);
   return listImages.length === 0 ? (
-    <div className="w_cw">
+    <div className="w_cw" style={{ width: "100%" }}>
       <div className="w_cW w_cX ">
         <button
           style={{ justifyContent: "flex-start" }}
@@ -32,7 +32,7 @@ function ImagesForTrip({ hidden, setHidden, trip }) {
   ) : (
     <>
       {loading ? (
-        <div className="w_cw">
+        <div className="w_cw" style={{ width: "100%" }}>
           <div className="w_cW w_cX ">
             <button
               style={{ justifyContent: "flex-start" }}
@@ -49,7 +49,7 @@ function ImagesForTrip({ hidden, setHidden, trip }) {
           </div>
         </div>
       ) : (
-        <div className="w_cw">
+        <div className="w_cw" style={{ width: "100%" }}>
           <div className="w_cW w_cX ">
             <button
               style={{ justifyContent: "flex-start" }}

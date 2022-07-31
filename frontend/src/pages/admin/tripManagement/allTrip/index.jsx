@@ -33,7 +33,7 @@ function AllTrip({ hidden, setHidden, setTrip }) {
   };
   const { isLogin } = useIsLogin();
   return userList.length === 0 ? (
-    <div className="w_cw">
+    <div className="w_cw" style={{ width: "100%" }}>
       <div className="w_cW w_cX ">
         <label className="w_rI w_rT"></label>
         <div
@@ -41,7 +41,7 @@ function AllTrip({ hidden, setHidden, setTrip }) {
           style={{
             display: "grid",
             gap: "24px",
-            gridTemplateColumns: "repeat(3, 1fr)",
+            gridTemplateColumns: "repeat(auto-fit,minmax(400px,1fr))",
             margin: "16px 0",
           }}
         >
